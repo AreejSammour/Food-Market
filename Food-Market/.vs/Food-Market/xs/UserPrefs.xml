@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{BEFD97E2-2D28-4DA3-9F46-7898B91CD665}|https">
+  <MonoDevelop.Ide.ItemProperties.Food-Market PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Shared/_Layout.cshtml">
+    <Files>
+      <File FileName="Program.cs" Line="13" Column="1" />
+      <File FileName="ApplicationContext.cs" Line="24" Column="1" />
+      <File FileName="Notes.txt" Line="11" Column="1" />
+      <File FileName="appsettings.json" Line="16" Column="1" />
+      <File FileName="Views/Shared/_Layout.cshtml" Line="20" Column="96" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Food-Market" expanded="True">
+            <Node name="Food-Market" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
