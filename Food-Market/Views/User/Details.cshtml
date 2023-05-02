@@ -1,0 +1,22 @@
+﻿@* DETAILS *@
+
+@model List<Food_Market.Models.SupportModels.Ticket>
+
+<h1>All Tickets</h1>
+
+@* tickets from all users*@
+
+@foreach (var ticket in Model)
+{
+    <span>Id: </span>
+    @Html.DisplayFor(modelItem => ticket.TicketId)
+    <br />
+    <span>Subject: </span>
+    @Html.DisplayFor(modelItem => ticket.Subject)
+    <br />
+    <span>Message: </span>
+    @Html.DisplayFor(modelItem => ticket.Message)
+    <br />
+
+    <div>---------------------------------------</div>
+}

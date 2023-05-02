@@ -22,4 +22,14 @@
     </PackageReference>
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Models\SupportModels\" />
+    <None Remove="Views\User\" />
+    <None Remove="Views\Admin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\SupportModels\" />
+    <Folder Include="Views\User\" />
+    <Folder Include="Views\Admin\" />
+  </ItemGroup>
 </Project>
