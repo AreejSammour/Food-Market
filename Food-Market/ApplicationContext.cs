@@ -1,4 +1,5 @@
 ﻿using System;
+using Food_Market.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Food_Market
@@ -12,6 +13,8 @@ namespace Food_Market
         //public DbSet<User> Users { get; set; }
         //public DbSet<Admin> Admins { get; set; }
         //public DbSet<Ticket> Tickets { get; set; }
+        public DbSet<Tag> Tags { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         //Constructor
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
