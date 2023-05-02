@@ -3676,31 +3676,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Eemmy\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/Users/amandajonort/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eemmy\\Source\\Repos\\Food-Market\\Food-Market\\Food-Market.csproj",
+      "projectUniqueName": "/Users/amandajonort/Documents/GitHub/Food-Market/Food-Market/Food-Market.csproj",
       "projectName": "Food-Market",
-      "projectPath": "C:\\Users\\Eemmy\\Source\\Repos\\Food-Market\\Food-Market\\Food-Market.csproj",
-      "packagesPath": "C:\\Users\\Eemmy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eemmy\\Source\\Repos\\Food-Market\\Food-Market\\obj\\",
+      "projectPath": "/Users/amandajonort/Documents/GitHub/Food-Market/Food-Market/Food-Market.csproj",
+      "packagesPath": "/Users/amandajonort/.nuget/packages/",
+      "outputPath": "/Users/amandajonort/Documents/GitHub/Food-Market/Food-Market/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Eemmy\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/amandajonort/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3763,7 +3756,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
       }
     }
   }
