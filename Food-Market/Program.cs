@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<ApplicationContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("ApplicationContext") ?? throw new InvalidOperationException("Connection string 'ApplicationContext' not found.")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Moawia") ?? throw new InvalidOperationException("Connection string 'Moawia' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

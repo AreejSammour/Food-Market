@@ -154,3 +154,14 @@ C:\Users\Eemmy\Source\Repos\Food-Market\Food-Market\obj\Debug\net7.0\refint\Food
 C:\Users\Eemmy\Source\Repos\Food-Market\Food-Market\obj\Debug\net7.0\Food-Market.pdb
 C:\Users\Eemmy\Source\Repos\Food-Market\Food-Market\obj\Debug\net7.0\Food-Market.genruntimeconfig.cache
 C:\Users\Eemmy\Source\Repos\Food-Market\Food-Market\obj\Debug\net7.0\ref\Food-Market.dll
+C:\Users\Dell\Source\Repos\Food-Market\School\Food-Market\obj\Debug\net7.0\Food-Market.csproj.AssemblyReference.cache
+C:\Users\Dell\Source\Repos\Food-Market\School\Food-Market\obj\Debug\net7.0\Food-Market.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\Source\Repos\Food-Market\School\Food-Market\obj\Debug\net7.0\Food-Market.AssemblyInfoInputs.cache
+C:\Users\Dell\Source\Repos\Food-Market\School\Food-Market\obj\Debug\net7.0\Food-Market.AssemblyInfo.cs
+C:\Users\Dell\Source\Repos\Food-Market\School\Food-Market\obj\Debug\net7.0\Food-Market.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Source\Repos\Food-Market\School\Food-Market\obj\Debug\net7.0\Food-Market.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Dell\Source\Repos\Food-Market\School\Food-Market\obj\Debug\net7.0\Food-Market.RazorAssemblyInfo.cache
+C:\Users\Dell\Source\Repos\Food-Market\School\Food-Market\obj\Debug\net7.0\Food-Market.RazorAssemblyInfo.cs
+C:\Users\Dell\Source\Repos\Food-Market\School\Food-Market\obj\Debug\net7.0\Food-Market.dll
+C:\Users\Dell\Source\Repos\Food-Market\School\Food-Market\obj\Debug\net7.0\refint\Food-Market.dll
+C:\Users\Dell\Source\Repos\Food-Market\School\Food-Market\obj\Debug\net7.0\Food-Market.pdb
