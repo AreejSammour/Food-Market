@@ -1,0 +1,52 @@
+﻿@model Food_Market.Models.OrderModels.OrderDetail
+@{
+    ViewData["Title"] = "Order Details";
+}
+
+<h2 class="mt-3">Order # @Model.OrderId Details</h2>
+<hr />
+<hr />
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-sm-8">
+            <div><span class="order-information-title"><b>Number:</b></span> @Model.OrderId</div>
+            <div><span class="order-information-title"><b>Date:</b></span> 4/21/2023 9:32:10 AM</div>
+            <div><span class="order-information-title"><b>Amount:</b></span> $160.00</div>
+        </div>
+        <div class="col-sm-4">
+            <div><b>Ordered by:</b> @Model.UserInfo</div>
+            <div><b>Order Address:</b> 932 Clousson Road Str</div>
+            <div>Sergeant Bluff</div>
+            <div>123-123-1231</div>
+        </div>
+	</div>
+	<br /><br />
+	<h4 class="mt-3">Orders List</h4>
+		<ul class="list-group">
+			<li class="list-group-item list-group-item-action list-group-item-secondary">
+				<ul class="list-group list-group-horizontal list-group-flush">
+					<li class="list-group-item col-2">Image</li>
+					<li class="list-group-item col-4">Product Name</li>
+					<li class="list-group-item col-2">Quantity</li>
+					<li class="list-group-item col-2">Price</li>
+					<li class="list-group-item col-2">Total</li>
+				</ul>
+			</li>
+			@*@foreach (Order Item in Model)
+			{
+				<li class="list-group-item">
+					<ul class="list-group list-group-horizontal list-group-flush">
+						<li class="list-group-item col-2">Image</li>
+						<li class="list-group-item col-4">Product Name</li>
+						<li class="list-group-item col-2">Quantity</li>
+						<li class="list-group-item col-2">Price</li>
+						<li class="list-group-item col-2">Total</li>
+					</ul>
+				</li>
+			}*@
+		</ul>
+	</div>
+<a asp-controller="Order" asp-action="Index" class="mt-3" style="width:250px">
+	List Of Orders
+</a>
+
