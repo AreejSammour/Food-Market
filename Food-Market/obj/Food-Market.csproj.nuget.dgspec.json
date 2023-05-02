@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/Users/amandajonort/Documents/GitHub/Food-Market/Food-Market/Food-Market.csproj": {}
+    "C:\\Users\\Eemmy\\Source\\Repos\\Food-Market\\Food-Market\\Food-Market.csproj": {}
   },
   "projects": {
-    "/Users/amandajonort/Documents/GitHub/Food-Market/Food-Market/Food-Market.csproj": {
+    "C:\\Users\\Eemmy\\Source\\Repos\\Food-Market\\Food-Market\\Food-Market.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/amandajonort/Documents/GitHub/Food-Market/Food-Market/Food-Market.csproj",
+        "projectUniqueName": "C:\\Users\\Eemmy\\Source\\Repos\\Food-Market\\Food-Market\\Food-Market.csproj",
         "projectName": "Food-Market",
-        "projectPath": "/Users/amandajonort/Documents/GitHub/Food-Market/Food-Market/Food-Market.csproj",
-        "packagesPath": "/Users/amandajonort/.nuget/packages/",
-        "outputPath": "/Users/amandajonort/Documents/GitHub/Food-Market/Food-Market/obj/",
+        "projectPath": "C:\\Users\\Eemmy\\Source\\Repos\\Food-Market\\Food-Market\\Food-Market.csproj",
+        "packagesPath": "C:\\Users\\Eemmy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eemmy\\Source\\Repos\\Food-Market\\Food-Market\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/amandajonort/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Eemmy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -82,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
