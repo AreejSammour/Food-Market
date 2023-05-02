@@ -2,6 +2,7 @@
 using Food_Market.Models;
 using Food_Market.Models.SupportModels;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Food_Market
 {
@@ -22,7 +23,18 @@ namespace Food_Market
             : base(options)
         {
         }
-    }
+
+		//Här är ett exempel på hur man lägger till rådata
+		//När vi add-migration och updata-database visas det i tabellerna
+
+		//protected override void OnModelCreating(ModelBuilder modelBuilder)
+		//{
+		//	Skill Skill1 = new Skill() { Id = 1,Name = "C-Sharp",Description = "C#",ImageURL = "/images/C-Sharp.png"};
+		//	Skill Skill2 = new Skill() { Id = 2, Name = "SQL", Description = "DataBase", ImageURL = "/images/SQL.png" };
+
+		//	modelBuilder.Entity<Skill>().HasData(Skill1, Skill2);
+		//}
+	}
 
 
 }
