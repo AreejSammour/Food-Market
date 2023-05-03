@@ -3676,23 +3676,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Eemmy\\.nuget\\packages\\": {},
+    "C:\\Users\\Areej\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eemmy\\Source\\Repos\\Food-Market\\Food-Market\\Food-Market.csproj",
+      "projectUniqueName": "E:\\Project\\Pull5\\Food-Market\\Food-Market.csproj",
       "projectName": "Food-Market",
-      "projectPath": "C:\\Users\\Eemmy\\Source\\Repos\\Food-Market\\Food-Market\\Food-Market.csproj",
-      "packagesPath": "C:\\Users\\Eemmy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eemmy\\Source\\Repos\\Food-Market\\Food-Market\\obj\\",
+      "projectPath": "E:\\Project\\Pull5\\Food-Market\\Food-Market.csproj",
+      "packagesPath": "C:\\Users\\Areej\\.nuget\\packages\\",
+      "outputPath": "E:\\Project\\Pull5\\Food-Market\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Eemmy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Areej\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3763,7 +3763,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

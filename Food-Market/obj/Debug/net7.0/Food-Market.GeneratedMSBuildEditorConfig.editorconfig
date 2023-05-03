@@ -9,37 +9,73 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Food_Market
 build_property.RootNamespace = Food_Market
-build_property.ProjectDir = C:\Users\Eemmy\Source\Repos\Food-Market\Food-Market\
+build_property.ProjectDir = E:\Project\Pull5\Food-Market\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Eemmy\Source\Repos\Food-Market\Food-Market
+build_property.MSBuildProjectDirectory = E:\Project\Pull5\Food-Market
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Eemmy/Source/Repos/Food-Market/Food-Market/Views/Home/Index.cshtml]
+[E:/Project/Pull5/Food-Market/Views/Admin/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project/Pull5/Food-Market/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project/Pull5/Food-Market/Views/Admin/Tickets.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVGlja2V0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project/Pull5/Food-Market/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Eemmy/Source/Repos/Food-Market/Food-Market/Views/Home/Privacy.cshtml]
+[E:/Project/Pull5/Food-Market/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Eemmy/Source/Repos/Food-Market/Food-Market/Views/Shared/Error.cshtml]
+[E:/Project/Pull5/Food-Market/Views/Order/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project/Pull5/Food-Market/Views/Order/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project/Pull5/Food-Market/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Eemmy/Source/Repos/Food-Market/Food-Market/Views/Shared/_ValidationScriptsPartial.cshtml]
+[E:/Project/Pull5/Food-Market/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Eemmy/Source/Repos/Food-Market/Food-Market/Views/_ViewImports.cshtml]
+[E:/Project/Pull5/Food-Market/Views/User/Confirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDb25maXJtYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project/Pull5/Food-Market/Views/User/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project/Pull5/Food-Market/Views/User/FAQ.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxGQVEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project/Pull5/Food-Market/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project/Pull5/Food-Market/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Eemmy/Source/Repos/Food-Market/Food-Market/Views/_ViewStart.cshtml]
+[E:/Project/Pull5/Food-Market/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Eemmy/Source/Repos/Food-Market/Food-Market/Views/Shared/_Layout.cshtml]
+[E:/Project/Pull5/Food-Market/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-ebxwgb84m2
