@@ -1,0 +1,106 @@
+﻿/*Google fonts imported*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&family=Crimson+Text');
+
+/* ________Produt page_________ */
+
+#flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-image {
+    width: 100%;
+}
+
+.flex-items {
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0px 1px 8px 1px lightgray;
+    margin: 0rem 1rem 2rem 1rem;
+}
+
+    .flex-items p {
+        margin-bottom: 0.5rem;
+    }
+
+.page-title {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-family: "Josefin Sans",sans-serif;
+}
+
+.text-font {
+    font-family: "Crimson Text",sans-serif;
+    font-size: 1.5rem;
+}
+
+.price-item {
+    text-align: right;
+}
+
+.category-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.8rem;
+}
+
+.category-selectfield {
+    width: 60%;
+    margin-right: 1rem;
+}
+
+.selectfield-btn {
+    background-color: #f4ab33;
+    border-color: #f4ab33;
+}
+
+.productcard-btn {
+    font-size: 1.1rem;
+    background-color: #f4ab33;
+    border-color: #f4ab33;
+}
+
+/* ________________ Media Queries ______________ */
+/* Tablet screens */
+@media (min-width:768px) {
+    .flex-items {
+        width: 45%;
+    }
+
+    .text-font {
+        font-size: 1.4rem;
+    }
+
+    .category-selectfield {
+        width: 50%;
+    }
+}
+
+/* Medium screens */
+@media (min-width:1024px) {
+    .flex-items {
+        width: 29%;
+    }
+
+    .category-selectfield {
+        width: 45%;
+        margin-right: 1rem;
+    }
+}
+
+/* Large screens */
+@media (min-width:1200px) {
+    .flex-items {
+        width: 22%;
+    }
+
+    .category-selectfield {
+        width: 38%;
+        margin-right: 1rem;
+    }
+
+    .productcard-btn {
+        font-size: 1rem;
+    }
+}
