@@ -1,5 +1,6 @@
 ﻿using System;
 using Food_Market.Models;
+using Food_Market.Models.ProductModels;
 using Food_Market.Models.SupportModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations;
@@ -8,7 +9,7 @@ namespace Food_Market
 {
 	public class ApplicationContext : DbContext
 	{
-        //public DbSet<Product> Products { get; set; }
+        public DbSet<Product> Products { get; set; }
         //public DbSet<ShoppingCart> ShoppingCarts { get; set; }
         //public DbSet<CartItem> CartItems { get; set; }
 
