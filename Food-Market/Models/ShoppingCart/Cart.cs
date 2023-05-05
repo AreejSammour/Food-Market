@@ -13,4 +13,4 @@ namespace Food_Market.Models.ShoppingCart
         public decimal TotalPrice { get; set; }
     }
     }
-}
+

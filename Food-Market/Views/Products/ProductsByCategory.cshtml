@@ -1,0 +1,18 @@
+﻿<!--EMMY
+-->
+
+<h1 class="details-title">Products with category @ViewBag.CategoryName</h1>
+@foreach (var product in Model)
+{
+    <div class="col-md-4 mb-3">
+        <div class="card text-font">
+            <img src="@product.ImageUrl" class="card-img-top" alt="@product.ProductName">
+            <div class="card-body">
+                <h5 class="card-title">@product.ProductName</h5>
+                <p class="card-text">@product.Description</p>
+                <a asp-action="Details" asp-controller="Products" asp-route-id="@product.Id" class="btn btn-primary  btn-block custom-btn">Details</a>
+            </div>
+        </div>
+    </div>
+    <a asp-action="Index" asp-controller="Products" class="btn btn-secondary">Back to products</a>
+}
