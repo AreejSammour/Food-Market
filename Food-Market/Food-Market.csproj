@@ -28,6 +28,7 @@
     <None Remove="Views\Admin\" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Migrations\" />
     <Folder Include="Models\SupportModels\" />
     <Folder Include="Views\User\" />
     <Folder Include="Views\Admin\" />

@@ -60,6 +60,40 @@
     background-color: #f4ab33;
     border-color: #f4ab33;
 }
+/*DETAILS PAGE - EMMY*/
+
+.details-title {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-family: "Josefin Sans",sans-serif;
+}
+.custom-btn {
+    background-color: #f4ab33;
+    border-color: #f4ab33;
+    
+}
+.custom-btn:hover{
+    background-color: #f4ab33;
+    border: none;
+}
+.details-center {
+    text-align: center;
+}
+.card {
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0px 1px 8px 1px lightgray;
+    margin: 0rem 1rem 2rem 1rem;
+}
+a {
+    color: black;
+    text-decoration:none;
+}
+a:hover{
+    color: grey;
+}
+
 
 /* ________________ Media Queries ______________ */
 /* Tablet screens */

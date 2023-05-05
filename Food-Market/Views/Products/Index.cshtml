@@ -3,6 +3,8 @@
 @model ProductCategory
 
 
+
+
 <h1 class="page-title">Products</h1>
 
 <form asp-controller="Products" asp-action="Index" method="post">
@@ -21,6 +23,7 @@
     {
         <div class="flex-items text-font">
             <a asp-action="Details" asp-route-id="@item.Id">
+              
                 <img src="@Html.DisplayFor(modelItem => item.ImageUrl)" alt="@item.ProductName" class="product-image" />
             </a>
             <p>
@@ -30,7 +33,7 @@
                 @Html.DisplayFor(modelItem => item.Price)
             </p>
             <div class="d-flex justify-content-evenly mb-2">
-                <a class="btn productcard-btn" asp-action="#" asp-route-id="@item.Id">Learn more</a>
+                <a class="btn productcard-btn" asp-action="Details" asp-route-id="@item.Id">Learn more</a>
                 <a class="btn productcard-btn" asp-action="#" asp-route-id="@item.Id">Add to cart</a>
             </div>
             <p class="mt-3">
