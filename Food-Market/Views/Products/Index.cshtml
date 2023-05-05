@@ -30,7 +30,7 @@
                 @Html.DisplayFor(modelItem => item.Price)
             </p>
             <div class="d-flex justify-content-evenly mb-2">
-                <a class="btn productcard-btn" asp-action="#" asp-route-id="@item.Id">Learn more</a>
+                <a class="btn productcard-btn" asp-action="Details" asp-route-id="@item.Id">Learn more</a>
                 <a class="btn productcard-btn" asp-action="#" asp-route-id="@item.Id">Add to cart</a>
             </div>
             <p class="mt-3">

@@ -2,6 +2,7 @@
 using Food_Market.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Food_Market.Models.ProductModels;
 
 namespace Food_Market.Controllers
 {
@@ -66,7 +67,7 @@ namespace Food_Market.Controllers
 
         public IActionResult AddToCart(int id, int quantity)
         {
-            Product product = _context.Products.FirstOrDefault(p => p.Id == id);
+            Product product = Context.Products.FirstOrDefault(p => p.Id == id);
             // var _cart = ShoppingCart.GetCart(HttpContext.Session, _context);
 
             if (product == null)
@@ -75,33 +76,33 @@ namespace Food_Market.Controllers
             }
 
             //If item exist
-            var existingItem = _context.CartItems.FirstOrDefault(x => x.Product.Id == product.Id);
+            var existingItem = Context.CartItems.FirstOrDefault(x => x.Product.Id == product.Id);
             if (existingItem != null)
             {
                 existingItem.Quantity += quantity;
                 existingItem.PriceTotal = existingItem.Quantity * existingItem.Price;
                 cart.TotalPrice += existingItem.Price;
-                _context.ShoppingCarts.Update(cart);
+                Context.ShoppingCarts.Update(cart);
             }
             //New Item
             else
             {
                 var cartItem = new CartItem();
-                cartItem.Name = product.Name;
+                cartItem.Name = product.ProductName;
                 cartItem.Quantity = quantity;
                 cartItem.Price = product.Price;
                 cartItem.PriceTotal = cartItem.Price * cartItem.Quantity;
                 cartItem.Product = product;
-                cartItem.ShoppingCart = cart;
+                //cartItem.ShoppingCart = cart;
                 cartItem.ProductId = product.Id;
 
                 cart.Items.Add(cartItem);
                 cart.TotalPrice += cartItem.PriceTotal;
 
-                _context.ShoppingCarts.Update(cart);
+                Context.ShoppingCarts.Update(cart);
             }
 
-            _context.SaveChanges();
+            Context.SaveChanges();
             return RedirectToAction("Index");
         }
         /// <summary>
@@ -132,7 +133,7 @@ namespace Food_Market.Controllers
             {
                 item.Quantity = quantity;
                 quantityDiff = quantity - formerQuantity;
-                product.StockQuantity -= quantityDiff;
+               // product.StockQuantity -= quantityDiff;
                 cart.TotalPrice += item.Quantity * item.Price;
                 item.PriceTotal = item.Price * item.Quantity;
             }
@@ -140,7 +141,7 @@ namespace Food_Market.Controllers
             {
                 item.Quantity = quantity;
                 quantityDiff = formerQuantity - quantity;
-                product.StockQuantity += quantityDiff;
+                //product.StockQuantity += quantityDiff;
                 cart.TotalPrice -= item.Price;
                 if (quantity == 0)
                 {
@@ -175,7 +176,7 @@ namespace Food_Market.Controllers
             var item = Context.CartItems.FirstOrDefault(x => x.Id == id);
 
             //Add item's quantity to product stock
-            product.StockQuantity += item.Quantity;
+           // product.StockQuantity += item.Quantity;
             //Delete cart item
             Context.CartItems.Remove(item);
 
