@@ -1,9 +1,15 @@
 ﻿<Properties StartupConfiguration="{BEFD97E2-2D28-4DA3-9F46-7898B91CD665}|https">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Food-Market PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Views/User/Details.cshtml">
     <Files>
-      <File FileName="ApplicationContext.cs" Line="29" Column="1" />
-      <File FileName="Views/Admin/Tickets.cshtml" Line="18" Column="24" />
-      <File FileName="Views/User/Details.cshtml" Line="12" Column="51" />
+      <File FileName="ApplicationContext.cs" />
+      <File FileName="Views/Admin/Tickets.cshtml" />
+      <File FileName="Views/User/Details.cshtml" Line="22" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -27,11 +33,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Food-Market PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MultiItemStartupConfigurations />
 </Properties>
