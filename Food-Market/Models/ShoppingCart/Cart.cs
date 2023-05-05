@@ -10,7 +10,7 @@ namespace Food_Market.Models.ShoppingCart
         [MinLength(1)]
         public HashSet<CartItem> Items { get; set; }
         public int Count { get; set; }
-        public double TotalPrice { get; set; }
+        public decimal TotalPrice { get; set; }
     }
     }
 }

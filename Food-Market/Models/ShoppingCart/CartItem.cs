@@ -19,7 +19,7 @@ namespace Food_Market.Models.ShoppingCart
         public int ProductId { get; set; }
         [Required]
         [MinLength(1)]
-        //public Product Product { get; set; }
+        public Product Product { get; set; }
 
         public int ShoppingCartId { get; set; }
         [Required]
