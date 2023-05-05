@@ -1,6 +1,7 @@
 ﻿using System;
 using Food_Market.Models;
 using Food_Market.Models.ShoppingCart;
+using Food_Market.Models.ProductModels;
 using Food_Market.Models.SupportModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations;

@@ -1,0 +1,43 @@
+﻿@using Food_Market.Models.ProductModels
+@using Food_Market.Models.ViewModels
+@model ProductCategory
+
+
+<h1 class="page-title">Products</h1>
+
+<form asp-controller="Products" asp-action="Index" method="post">
+    <div class="category-form">
+        <select class="form-select category-selectfield" asp-items="Model.CategoriesSelectList" asp-for="SelectedCategory">
+            <option value="DEFAULTVALUE">-- Select A Category --</option>
+        </select>
+        <span>
+            <button type="submit" class="btn selectfield-btn">Show Me</button>
+        </span>
+    </div>
+</form>
+
+<div id="flex-container">
+    @foreach (Product item in Model.Products)
+    {
+        <div class="flex-items text-font">
+            <a asp-action="Details" asp-route-id="@item.Id">
+                <img src="@Html.DisplayFor(modelItem => item.ImageUrl)" alt="@item.ProductName" class="product-image" />
+            </a>
+            <p>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </p>
+            <p class="price-item">
+                @Html.DisplayFor(modelItem => item.Price)
+            </p>
+            <div class="d-flex justify-content-evenly mb-2">
+                <a class="btn productcard-btn" asp-action="#" asp-route-id="@item.Id">Learn more</a>
+                <a class="btn productcard-btn" asp-action="#" asp-route-id="@item.Id">Add to cart</a>
+            </div>
+            <p class="mt-3">
+                <small class="text-muted">
+                    Related tags: <span>@Html.DisplayFor(modelItem => item.ProductTag)</span>
+                </small>
+            </p>
+        </div>
+    }
+</div>
