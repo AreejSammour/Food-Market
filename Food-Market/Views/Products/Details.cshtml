@@ -1,0 +1,43 @@
+﻿@using Food_Market.Models.ProductModels
+@using Food_Market.Models.ViewModels
+@model Product
+<!--EMMY-->
+<h1 class="details-title">@Model.ProductName</h1>
+<div class="details-center text-font">
+    <p>Details: @Model.Description</p>
+
+    <p>Price: @Model.Price</p>
+
+    <p>
+        Categories:
+        @foreach (var category in Model.Categories)
+        {
+            <a href="@Url.Action("ProductsByCategory", new { categoryId = category.Id })">@category.CategoryName</a>
+        }
+    </p>
+
+    <p>
+        Tags: @foreach (var tag in Model.Tags)
+        {
+            <a href="@Url.Action("ProductsByTag", new { tagName = tag.TagName })">@tag.TagName</a>
+        }
+    </p>
+
+    <div>
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> Share on Instagram</a>
+        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i> Share on Twitter</a>
+    </div>
+</div>
+<br />
+
+<div class="row justify-content-between">
+    <div class="col-md-4 mb-2 text-end">
+        <a asp-action="Index" asp-controller="Products" class="btn btn-secondary btn-block">Back to products</a>
+    </div>
+    <div class="col-md-4 mb-2 text-start">
+        <a asp-action="AddToCart" asp-controller="#" asp-route-id="@Model.Id" class="btn btn-primary btn-block custom-btn">Add to Cart</a>
+    </div>
+</div>
+
+
+

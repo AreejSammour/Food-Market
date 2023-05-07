@@ -1,0 +1,60 @@
+﻿@model Food_Market.Models.ItemsInCartViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Shopping Cart</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.ElementAt(0)!.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.ElementAt(0)!.Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.ElementAt(0)!.PriceTotal)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Items)
+        {
+            <tr>
+                <td>
+                    <form asp-controller="Cart" asp-action="UpdateQuantity">
+                        <input type="hidden" name="id" value="@item.Id" />
+                        <input type="number" name="quantity" value="@item.Quantity" min="0" class="form-control" style="width: 5em" />
+                        <button type="submit">Update</button>
+                    </form>
+                </td>
+                <td>
+                    <p>@item.PriceTotal <span style="opacity:0.5">  (@item.Price /st)</span></p>
+                </td>
+                <td>
+                    <a class="btn btn-danger" asp-controller="Cart" asp-action="Delete" asp-route-id="@item.Id"><i class="fas fa-trash-alt"></i></a>
+                </td>
+            </tr>
+        }
+        <tr>
+            <td>
+                @if (Model.CurrencyMode == "USD")
+                {
+                    <strong>Total Price</strong> @(Model.TotalPrice) <span>$</span>
+                }
+                else
+                {
+                    <strong>Total Price</strong> @(Model.TotalPrice) <span>kr</span>
+                }
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div>
+    <button>To Check Out</button>
+</div>
