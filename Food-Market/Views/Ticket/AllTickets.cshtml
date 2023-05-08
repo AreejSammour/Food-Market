@@ -1,0 +1,50 @@
+﻿@* made by Amanda *@
+
+@* All tickets - for admin *@
+
+@model List<Food_Market.Models.Ticket>
+
+<h1>Admin - All Tickets</h1>
+
+<style>
+    .ticketdiv {
+        margin-bottom: 10px;
+        padding: 16px;
+        max-width: 600px;
+        min-width: 60%;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+    }
+</style>
+
+@foreach (var ticket in Model)
+{
+    <div class="ticketdiv">
+        <strong><span>Ticket number# </span></strong>
+        @Html.DisplayFor(modelItem => ticket.TicketId)
+        <br />
+
+        <strong><span>Subject: </span></strong>
+        @Html.DisplayFor(modelItem => ticket.Subject)
+        <br />
+
+        <strong><span>Message: </span></strong>
+        @Html.DisplayFor(modelItem => ticket.Message)
+        <br /><br />
+
+        <strong><span>Response: </span></strong> <br />
+        @if (string.IsNullOrEmpty(ticket.Response))
+        {
+            <em>Pending</em>
+        }
+        else
+            @Html.DisplayFor(modelItem => ticket.Response)
+        <br />
+
+        <br />
+
+        <!-- Link to edit the specific ticket id -->
+        <a href="@Url.Action("Edit", "Ticket")?ticketId=@ticket.TicketId" class="btn btn-primary">Edit Ticket</a>
+
+    </div>
+}

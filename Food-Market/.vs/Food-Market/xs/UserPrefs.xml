@@ -1,32 +1,15 @@
 ﻿<Properties StartupConfiguration="{BEFD97E2-2D28-4DA3-9F46-7898B91CD665}|https">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Food-Market PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Views/User/Details.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ApplicationContext.cs">
     <Files>
-      <File FileName="ApplicationContext.cs" />
-      <File FileName="Views/Admin/Tickets.cshtml" />
-      <File FileName="Views/User/Details.cshtml" Line="22" Column="2" />
+      <File FileName="ApplicationContext.cs" Line="9" Column="22" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Food-Market" expanded="True">
             <Node name="Food-Market" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="SupportModels" expanded="True" />
-              </Node>
-              <Node name="Views" expanded="True">
-                <Node name="Admin" expanded="True" />
-                <Node name="Shared" expanded="True" />
-                <Node name="User" expanded="True">
-                  <Node name="Details.cshtml" selected="True" />
-                </Node>
-              </Node>
+              <Node name="ApplicationContext.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -34,4 +17,9 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Food-Market PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
 </Properties>
