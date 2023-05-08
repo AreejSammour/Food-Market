@@ -26,10 +26,10 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Products" asp-action="Index">Products</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">Support</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Ticket" asp-action="Index">Support</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Index">Admin</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Ticket" asp-action="AllTickets">Admin</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav .col-md-4 col-3 .ms-auto my-2 my-lg-0" style="--bs-scroll-height: 100px;">
@@ -44,7 +44,7 @@
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="#">My Profile</a></li>
                                 <li><a class="dropdown-item" asp-controller="Order" asp-action="Index">My Orders</a></li>
-                                <li><a class="dropdown-item" href="#">My Tickets</a></li>
+                                <li><a class="dropdown-item" asp-controller="Ticket" asp-action="MyTickets">My Tickets</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item fw-lighter" href="#">Sign Out</a></li>
                             </ul>
@@ -62,7 +62,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - Food_Market - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2023 - Food Market
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
