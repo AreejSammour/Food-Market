@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Food_Market.Models;
 using Microsoft.AspNetCore.Mvc;
 
+// made by Amanda
+
 namespace Food_Market.Controllers
 {
 	public class TicketController : Controller

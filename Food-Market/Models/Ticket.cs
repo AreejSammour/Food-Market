@@ -1,15 +1,12 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
+// made by Amanda
+
 namespace Food_Market.Models
 {
     public class Ticket
     {
-        // dotnet ef database update
-        // dotnet ef migrations add InitialCreate
-        // dotnet ef migrations remove
-        // dotnet ef database update -c ApplicationContext
-
         public int TicketId { get; set; }
 
         public string Subject { get; set; }
