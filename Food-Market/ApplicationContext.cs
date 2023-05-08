@@ -24,19 +24,7 @@ namespace Food_Market
         {
         }
 
-        //Här är ett exempel på hur man lägger till rådata
-        //När vi add-migration och updata-database visas det i tabellerna
-
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //	Skill Skill1 = new Skill() { Id = 1,Name = "C-Sharp",Description = "C#",ImageURL = "/images/C-Sharp.png"};
-        //	Skill Skill2 = new Skill() { Id = 2, Name = "SQL", Description = "DataBase", ImageURL = "/images/SQL.png" };
-
-        //	modelBuilder.Entity<Skill>().HasData(Skill1, Skill2);
-        //}
-
-
-        // data seed for TICKETS
+        // data seed for TICKETS - Amanda
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 

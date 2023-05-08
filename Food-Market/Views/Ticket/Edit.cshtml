@@ -1,4 +1,6 @@
-﻿@* Edit page - for admin *@
+﻿@* made by Amanda *@
+
+@* Edit page - for admin *@
 
 
 @model Food_Market.Models.Ticket
@@ -31,23 +33,23 @@
     <br /><br />
 
     @* write a response*@
-<form asp-action="Edit" asp-route-ticketId="@Model.TicketId" method="POST">
-    <input type="hidden" asp-for="TicketId" />
-    <strong><span> Response:</span></strong>
-    <br />
-    <textarea id="Response" name="Response" rows="16" cols="70">@Model.Response</textarea> <br /> <br />
+    <form asp-action="Edit" asp-route-ticketId="@Model.TicketId" method="POST">
+        <input type="hidden" asp-for="TicketId" />
+        <strong><span> Response:</span></strong>
+        <br />
+        <textarea id="Response" name="Response" rows="16" cols="70">@Model.Response</textarea> <br /> <br />
 
-    <!-- Save changes button -->
-    <input type="submit" value="Save Changes" class="btn btn-primary" />
+        <!-- Save changes button -->
+        <input type="submit" value="Save Changes" class="btn btn-primary" />
 
-    <!-- Delete button -->
-    <a class="btn btn-danger" href="@Url.Action("Delete", "Ticket", new { id = Model.TicketId })" onclick="return confirm('Are you sure you want to delete this ticket?')">Delete</a>
+        <!-- Delete button -->
+        <a class="btn btn-danger" href="@Url.Action("Delete", "Ticket", new { id = Model.TicketId })" onclick="return confirm('Are you sure you want to delete this ticket?')">Delete</a>
 
 
-    <!-- Cancel button -->
-    <a asp-action="AllTickets" class="btn btn-secondary">Cancel</a>
+        <!-- Cancel button -->
+        <a asp-action="AllTickets" class="btn btn-secondary">Cancel</a>
 
-</form>
+    </form>
 
 </div>
 
