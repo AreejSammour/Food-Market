@@ -1,0 +1,40 @@
+﻿@* SUPPORT INDEX - form to create ticket for user *@
+
+@model List<Food_Market.Models.Ticket>
+
+
+<div>
+    <h1>Contact us</h1> <br />
+
+    <p>We love to hear from our Food Market-Customers.</p>
+    <p>If you have any questions, feel free to reach out to us. You can also check our <a asp-controller="Ticket" asp-action="faq">FAQ section</a> for answers to common questions.</p>
+
+    <p>Send us a message</p>
+
+    @*the input in the form will be sent to a method called create in the TicketController*@
+    <form asp-action="Create" method="POST">
+
+        <!-- Validation -->
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <strong><span>Subject</span></strong><br />
+        <input type="text" name="Subject" required /> <br />
+
+        <strong><span>Message</span></strong><br />
+        <textarea id="Message" name="Message" rows="16" cols="70" required> </textarea> <br /> <br />
+
+        <!-- Validation -->
+        @if (ViewData.ModelState.TryGetValue("Message", out var messageError))
+        {
+            <span class="text-danger">@messageError.Errors[0].ErrorMessage</span>
+        }
+
+        <!-- Validation only warn for Message field -->
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="submit" value="Send" />
+    </form>
+
+    <br />
+    <p>Feel free to send us an email at <a href="mailto:support@foodmarket.com">support@foodmarket.com</a>.</p>
+
+</div>

@@ -1,15 +1,9 @@
 ﻿<Properties StartupConfiguration="{BEFD97E2-2D28-4DA3-9F46-7898B91CD665}|https">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Food-Market PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Views/User/Details.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
       <File FileName="ApplicationContext.cs" />
-      <File FileName="Views/Admin/Tickets.cshtml" />
-      <File FileName="Views/User/Details.cshtml" Line="22" Column="2" />
+      <File FileName="Program.cs" Line="2" Column="37" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,21 +11,22 @@
           <Node name="Food-Market" expanded="True">
             <Node name="Food-Market" expanded="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="SupportModels" expanded="True" />
-              </Node>
+              <Node name="Migrations" expanded="True" />
+              <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Admin" expanded="True" />
-                <Node name="Shared" expanded="True" />
-                <Node name="User" expanded="True">
-                  <Node name="Details.cshtml" selected="True" />
-                </Node>
+                <Node name="Ticket" expanded="True" />
               </Node>
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Food-Market PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

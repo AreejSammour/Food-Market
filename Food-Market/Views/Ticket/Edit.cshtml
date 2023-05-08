@@ -1,0 +1,56 @@
+﻿@* Edit page - for admin *@
+
+
+@model Food_Market.Models.Ticket
+
+<h1>Admin - Edit Ticket</h1>
+
+<style>
+    .ticketdiv {
+        margin-bottom: 10px;
+        padding: 16px;
+        max-width: 600px;
+        min-width: 60%;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+    }
+</style>
+
+@* the ticket to edit*@
+<div class="ticketdiv">
+    <strong><span>Ticket number# </span></strong>
+    @Html.DisplayFor(model => model.TicketId)
+    <br />
+
+    <strong><span>Subject: </span></strong>
+    @Html.DisplayFor(model => model.Subject)
+    <br />
+
+    <strong><span>Message: </span></strong>
+    @Html.DisplayFor(model => model.Message)
+    <br /><br />
+
+    @* write a response*@
+<form asp-action="Edit" asp-route-ticketId="@Model.TicketId" method="POST">
+    <input type="hidden" asp-for="TicketId" />
+    <strong><span> Response:</span></strong>
+    <br />
+    <textarea id="Response" name="Response" rows="16" cols="70">@Model.Response</textarea> <br /> <br />
+
+    <!-- Save changes button -->
+    <input type="submit" value="Save Changes" class="btn btn-primary" />
+
+    <!-- Delete button -->
+    <a class="btn btn-danger" href="@Url.Action("Delete", "Ticket", new { id = Model.TicketId })" onclick="return confirm('Are you sure you want to delete this ticket?')">Delete</a>
+
+
+    <!-- Cancel button -->
+    <a asp-action="AllTickets" class="btn btn-secondary">Cancel</a>
+
+</form>
+
+</div>
+
+
+
+
