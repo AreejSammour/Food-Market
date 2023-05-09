@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Q2Sl4cljzaSEmkEAyBed67GnuBMYLmB5dcXGQahzntf4xAgC3S3p0wWo1M+GidO48ezyCj76xxTYpr7Kgl9utQ==",
+  "dgSpecHash": "yErLO5Tdw6sEzn/d666p8la0QHPxqaSNhoehL6NEhTKQYCswm1Zjv/YqUXW2i9+D9l/giUIOTgio0/YbdvZlFA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dell\\Source\\Repos\\Food-Market-moa2\\Food-Market\\Food-Market.csproj",
+  "projectFilePath": "C:\\Users\\Dell\\Source\\Repos\\Food-Market-qqq\\Food-Market\\Food-Market.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dell\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

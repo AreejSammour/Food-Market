@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dell\\Source\\Repos\\Food-Market-moa2\\Food-Market\\Food-Market.csproj": {}
+    "C:\\Users\\Dell\\Source\\Repos\\Food-Market-qqq\\Food-Market\\Food-Market.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dell\\Source\\Repos\\Food-Market-moa2\\Food-Market\\Food-Market.csproj": {
+    "C:\\Users\\Dell\\Source\\Repos\\Food-Market-qqq\\Food-Market\\Food-Market.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dell\\Source\\Repos\\Food-Market-moa2\\Food-Market\\Food-Market.csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\Source\\Repos\\Food-Market-qqq\\Food-Market\\Food-Market.csproj",
         "projectName": "Food-Market",
-        "projectPath": "C:\\Users\\Dell\\Source\\Repos\\Food-Market-moa2\\Food-Market\\Food-Market.csproj",
+        "projectPath": "C:\\Users\\Dell\\Source\\Repos\\Food-Market-qqq\\Food-Market\\Food-Market.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dell\\Source\\Repos\\Food-Market-moa2\\Food-Market\\obj\\",
+        "outputPath": "C:\\Users\\Dell\\Source\\Repos\\Food-Market-qqq\\Food-Market\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
