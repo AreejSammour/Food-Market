@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 <body>
     <header>
@@ -50,6 +51,15 @@
                             </ul>
                         </li>
                     </ul>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-primary" onclick="updateCurrencyMode('SEK')">SEK</button>
+                        <button type="button" class="btn btn-primary " onclick="updateCurrencyMode('USD')">USD</button>
+                    </div>
+                    <a id="cart-count" class="nav-link text-dark" asp-area="" asp-controller="Cart" asp-action="Index">
+                        <i class="fa fa-shopping-cart" style="font-size:4em"></i>
+                        <span class="badge badge-pill badge-danger"></span>
+                        <span class="badge badge-pill badge-danger">5</span>
+                    </a>
                 </div>
             </div>
         </nav>
@@ -68,6 +78,13 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        function updateCurrencyMode(currencyMode) {
+            $.post('@Url.Action("UpdateCurrencyMode", "Products")', { currencyMode: currencyMode }, function (data) {
+                location.reload();
+            });
+        }
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

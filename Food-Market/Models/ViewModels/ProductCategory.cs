@@ -13,6 +13,8 @@ namespace Food_Market.Models.ViewModels
 
         // The property which will display the entire select list
         public List<SelectListItem> CategoriesSelectList { get; set; }
+        public string Currency { get; set; }
+
     }
 }
 

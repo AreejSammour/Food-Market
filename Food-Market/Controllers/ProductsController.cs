@@ -27,13 +27,27 @@ namespace Food_Market.Controllers
             vm.Products = AllProducts;
             vm.Categories = AllCategories;
             vm.CategoriesSelectList = new List<SelectListItem>();
+            vm.Currency = HttpContext.Session.GetString("CurrencyMode") ?? "SEK";
 
             foreach (var category in AllCategories)
             {
                 vm.CategoriesSelectList.Add(new SelectListItem { Text = category.CategoryName, Value = category.Id.ToString() });
             }
-
+            var currencyMode = HttpContext.Session.GetString("CurrencyMode") ?? "SEK";
+            if (currencyMode == "USD")
+            {
+                foreach (var product in AllProducts)
+                {
+                    product.Price = Math.Round(product.Price / 10, 2);
+                }
+            }
             return View(vm);
+        }
+        [HttpPost]
+        public IActionResult UpdateCurrencyMode(string currencyMode)
+        {
+            HttpContext.Session.SetString("CurrencyMode", currencyMode);
+            return Ok();
         }
 
         [HttpPost]
@@ -55,6 +69,21 @@ namespace Food_Market.Controllers
             }
 
             return View(product);
+        }
+
+        [HttpPost]
+        public IActionResult AddToCart(int productId, int quantity)
+        {
+            CartController _shoppingCart = new CartController(Context);
+            var product = Context.Products.FirstOrDefault(p => p.Id == productId);
+
+            if (product != null)
+            {
+                _shoppingCart.AddToCart(product.Id, quantity);
+                Context.SaveChanges();
+            }
+
+            return RedirectToAction("Index");
         }
         /*
          When a user requests this page, they provide a "tagName" parameter in the URL or click on a

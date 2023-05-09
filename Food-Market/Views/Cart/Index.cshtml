@@ -18,6 +18,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Items.ElementAt(0)!.PriceTotal)
             </th>
+            <th>
+                <a class="btn btn-danger" asp-controller="Cart" asp-action="EmptyCart">Empty cart</a>
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -25,6 +28,9 @@
         @foreach (var item in Model.Items)
         {
             <tr>
+                <td>
+                    <p>@item.Name</p>
+                </td>
                 <td>
                     <form asp-controller="Cart" asp-action="UpdateQuantity">
                         <input type="hidden" name="id" value="@item.Id" />
@@ -56,5 +62,8 @@
 </table>
 
 <div>
-    <button>To Check Out</button>
+    <a class="btn" asp-controller="Checkouts" asp-action="Index">Checkout</a>
 </div>
+
+
+

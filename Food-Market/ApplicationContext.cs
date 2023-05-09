@@ -13,6 +13,8 @@ namespace Food_Market
         public DbSet<Product> Products { get; set; }
         public DbSet<Cart> ShoppingCarts { get; set; }
         public DbSet<CartItem> CartItems { get; set; }
+        public DbSet<Checkout> Checkout { get; set; }
+
 
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<Tag> Tags { get; set; }
