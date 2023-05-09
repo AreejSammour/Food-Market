@@ -12,7 +12,7 @@ detta skall vara kommenterat i productscontroller details:
         the method returns a 'View' with the product details*/
 men vet ej om det kom med i push, ser den ej.
 
-Moawia - Shoppingcart osv osv
+Moawia - Shoppingcart, cartItems and checkout. Added changing currency from dollar to krona and vice versa. Added controller to allow the user to change the quantity of the added product to the shopping cart
 
 Henrik - Checkout osv osv
 
