@@ -1,8 +1,6 @@
 ﻿using Food_Market.Models.ShoppingCart;
 using System.ComponentModel.DataAnnotations;
 
-namusing Food_Market.Models.ShoppingCart;
-using System.ComponentModel.DataAnnotations;
 
 namespace Food_Market.Models
 {
