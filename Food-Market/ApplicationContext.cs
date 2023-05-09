@@ -5,6 +5,7 @@ using Food_Market.Models.ShoppingCart;
 using Food_Market.Models.ProductModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations;
+using Food_Market.Models.OrderModels;
 
 namespace Food_Market
 {
@@ -19,6 +20,9 @@ namespace Food_Market
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Order> orders { get; set; }
+        public DbSet<OrderDetail> ordersDetail { get; set; }
+
 
         //Constructor
         public ApplicationContext(DbContextOptions<ApplicationContext> options)

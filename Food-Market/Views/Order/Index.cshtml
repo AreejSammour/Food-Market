@@ -1,13 +1,13 @@
-﻿@using Food_Market.Models.OrderModels;
-@model List<Order>
+﻿@using Food_Market.Models.OrderModels
+@model List<OrderViewModel>
 @{
 	ViewData["Title"] = "My Orders";
 }
 
 <div class="container mt-3">
 	<h2>Orders List</h2>
-	<ul class="list-group">
-		<li class="list-group-item list-group-item-action list-group-item-secondary">
+	
+		<div class="list-group-item list-group-item-action list-group-item-secondary">
 			<ul class="list-group list-group-horizontal list-group-flush">
 				<li class="list-group-item col-1">Order No.</li>
 				<li class="list-group-item col-2">User Email</li>
@@ -16,19 +16,18 @@
 				<li class="list-group-item col-2">Order Status</li>
 				<li class="list-group-item col-2">Details</li>
 			</ul>
-		</li>
-		@foreach (Order Item in Model)
+		</div>
+
+	@foreach (OrderViewModel Item in Model)
 		{
-			<li class="list-group-item">
-				<ul class="list-group list-group-horizontal list-group-flush">
-					<li class="list-group-item col-1">@Item.OrderId</li>
-					<li class="list-group-item col-2">@Item.UserEmail</li>
-					<li class="list-group-item col-3">@Item.CreatedDate.ToString("MM/dd/yyyy hh:mm tt") </li>
-					<li class="list-group-item col-2">@Item.OrderTotal</li>
-					<li class="list-group-item col-2">@Item.OrderStatus</li>
-					<li class="list-group-item col-2"><a asp-action="Details" asp-route-id="@Item.OrderId">View Details</a></li>
-				</ul>
-			</li>
+		<ul class="list-group list-group-horizontal list-group-flush">
+			<li class="list-group-item col-1">@Item.Id</li>
+			<li class="list-group-item col-2">@Item.UserEmail</li>
+			<li class="list-group-item col-3">@Item.Date </li>
+			<li class="list-group-item col-2">@Item.Total</li>
+			<li class="list-group-item col-2">@Item.status</li>
+			<li class="list-group-item col-2"><a asp-action="" asp-route-id="" disable>View Details</a></li>
+		</ul>
 		}
-	</ul>
+	
 </div>

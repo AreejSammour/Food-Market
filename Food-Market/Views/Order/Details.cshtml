@@ -3,26 +3,25 @@
     ViewData["Title"] = "Order Details";
 }
 
-<h2 class="mt-3">Order # @Model.OrderId Details</h2>
+<h2 class="mt-3">Order # @Model.Checkout.Id Details</h2>
 <hr />
 <hr />
 <div class="container mt-3">
     <div class="row">
         <div class="col-sm-8">
-            <div><span class="order-information-title"><b>Number:</b></span> @Model.OrderId</div>
-            <div><span class="order-information-title"><b>Date:</b></span> 4/21/2023 9:32:10 AM</div>
-            <div><span class="order-information-title"><b>Amount:</b></span> $160.00</div>
+			<div><span class="order-information-title"><b>Date:</b></span> @Model.PlacedDate.ToString("MM/dd/yyyy hh:mm tt")</div>
+            <div><span class="order-information-title"><b>Sub-Total:</b></span> @Model.OrderTotal</div>
         </div>
         <div class="col-sm-4">
-            <div><b>Ordered by:</b> @Model.UserInfo</div>
-            <div><b>Order Address:</b> 932 Clousson Road Str</div>
-            <div>Sergeant Bluff</div>
-            <div>123-123-1231</div>
+			<div><b>Ordered by:</b> @Model.Checkout.FirstName @Model.Checkout.LastName</div>
+			<div><b>Order Address:</b> @Model.Checkout.Address </div>
+			<div class="ps-5"> @Model.Checkout.City / @Model.Checkout.ZipCode </div>
+            
         </div>
 	</div>
 	<br /><br />
-	<h4 class="mt-3">Orders List</h4>
-		<ul class="list-group">
+	<h3 class="mt-3 bg-info">Orders List</h3>
+		@*<ul class="list-group">
 			<li class="list-group-item list-group-item-action list-group-item-secondary">
 				<ul class="list-group list-group-horizontal list-group-flush">
 					<li class="list-group-item col-2">Image</li>
@@ -32,21 +31,17 @@
 					<li class="list-group-item col-2">Total</li>
 				</ul>
 			</li>
-			@*@foreach (Order Item in Model)
+		</ul>*@
+		<div>
+			@foreach (var item in Model.Checkout.CartItems)
 			{
-				<li class="list-group-item">
-					<ul class="list-group list-group-horizontal list-group-flush">
-						<li class="list-group-item col-2">Image</li>
-						<li class="list-group-item col-4">Product Name</li>
-						<li class="list-group-item col-2">Quantity</li>
-						<li class="list-group-item col-2">Price</li>
-						<li class="list-group-item col-2">Total</li>
-					</ul>
-				</li>
-			}*@
-		</ul>
-	</div>
-<a asp-controller="Order" asp-action="Index" class="mt-3" style="width:250px">
-	List Of Orders
-</a>
+				@Html.Partial("_ProdOrderDetail",item)
+			}
+		</div>
+</div>
 
+<div class="d-flex justify-content-end m-3 ">
+	<a asp-controller="Order" asp-action="Index" class="mt-3 p-1 rounded-3 bg-info text-center" style="width:250px">
+		List Of All Orders
+	</a>
+</div>
