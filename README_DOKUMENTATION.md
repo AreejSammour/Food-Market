@@ -16,6 +16,6 @@ Moawia - Shoppingcart osv osv
 
 Henrik - Checkout osv osv
 
-Areej - Order osv osv
+Areej - Order and Order details ..
 
 Amanda - Ticketing system
