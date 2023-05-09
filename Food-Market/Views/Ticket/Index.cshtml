@@ -9,7 +9,7 @@
     <h1>Contact us</h1> <br />
 
     <p>We love to hear from our Food Market-Customers.</p>
-    <p>If you have any questions, feel free to reach out to us. You can also check our <a asp-controller="Ticket" asp-action="faq">FAQ section</a> for answers to common questions.</p>
+    <p>If you have any questions, feel free to reach out to us. You can also check our <u><a asp-controller="Ticket" asp-action="faq">FAQ section</a></u> for answers to common questions.</p>
 
     <p>Send us a message</p>
 
@@ -33,10 +33,10 @@
 
         <!-- Validation only warn for Message field -->
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <input type="submit" value="Send" />
+        <input type="submit" value="Send" class="btn btn-primary" />
     </form>
 
     <br />
-    <p>Feel free to send us an email at <a href="mailto:support@foodmarket.com">support@foodmarket.com</a>.</p>
+    <p>Feel free to send us an email at <u><a href="mailto:support@foodmarket.com">support@foodmarket.com</a></u>.</p>
 
 </div>
