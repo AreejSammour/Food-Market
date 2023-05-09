@@ -9,17 +9,18 @@ namespace Food_Market.Controllers
     public class CartController : Controller
     {
         private readonly ApplicationContext Context;
-        Cart cart = new Cart();
+        Cart cart;
+        
         public CartController(ApplicationContext context)
         {
             Context = context;
+            cart = new Cart();
         }
         public async Task<IActionResult> Index()
         {
 
             var shoppingCartsItems = await Context.CartItems.ToListAsync();
-            //var shoppingCarts = _context.ShoppingCarts.Include(sc => sc.Items).ToList();
-            var currencyMode = HttpContext.Session.GetString("CurrencyMode") ?? "USD";
+            var currencyMode = HttpContext.Session.GetString("CurrencyMode") ?? "SEK";
             foreach (var item in shoppingCartsItems)
             {
                 cart.TotalPrice += item.Price * item.Quantity;
@@ -28,6 +29,7 @@ namespace Food_Market.Controllers
             foreach (var item in shoppingCartsItems)
             {
                 itemsHash.Add(item);
+                cart.Items.Add(item);
             }
             var viewModel = new ItemsInCartViewModel
             {
@@ -36,8 +38,7 @@ namespace Food_Market.Controllers
                 TotalPrice = cart.TotalPrice,
                 CurrencyMode = currencyMode
             };
-
-            if (viewModel.CurrencyMode == "USD")
+            if (currencyMode == "USD")
             {
                 foreach (var item in viewModel.Items)
                 {
@@ -46,6 +47,8 @@ namespace Food_Market.Controllers
                 }
                 viewModel.TotalPrice = Math.Round(viewModel.TotalPrice / 10, 2);
             }
+            Context.Update(cart);
+            Context.SaveChanges();
 
             return View(viewModel);
 
@@ -68,13 +71,11 @@ namespace Food_Market.Controllers
         public IActionResult AddToCart(int id, int quantity)
         {
             Product product = Context.Products.FirstOrDefault(p => p.Id == id);
-            // var _cart = ShoppingCart.GetCart(HttpContext.Session, _context);
 
             if (product == null)
             {
                 return NotFound();
             }
-
             //If item exist
             var existingItem = Context.CartItems.FirstOrDefault(x => x.Product.Id == product.Id);
             if (existingItem != null)
@@ -82,7 +83,7 @@ namespace Food_Market.Controllers
                 existingItem.Quantity += quantity;
                 existingItem.PriceTotal = existingItem.Quantity * existingItem.Price;
                 cart.TotalPrice += existingItem.Price;
-                Context.ShoppingCarts.Update(cart);
+                Context.Update(cart);
             }
             //New Item
             else
@@ -93,17 +94,15 @@ namespace Food_Market.Controllers
                 cartItem.Price = product.Price;
                 cartItem.PriceTotal = cartItem.Price * cartItem.Quantity;
                 cartItem.Product = product;
-                //cartItem.ShoppingCart = cart;
                 cartItem.ProductId = product.Id;
 
                 cart.Items.Add(cartItem);
                 cart.TotalPrice += cartItem.PriceTotal;
-
-                Context.ShoppingCarts.Update(cart);
+                Context.Update(cart);
             }
 
             Context.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Products");
         }
         /// <summary>
         /// This method allows the user to changes the quantity of items in shopping cart
@@ -133,7 +132,6 @@ namespace Food_Market.Controllers
             {
                 item.Quantity = quantity;
                 quantityDiff = quantity - formerQuantity;
-               // product.StockQuantity -= quantityDiff;
                 cart.TotalPrice += item.Quantity * item.Price;
                 item.PriceTotal = item.Price * item.Quantity;
             }
@@ -141,7 +139,6 @@ namespace Food_Market.Controllers
             {
                 item.Quantity = quantity;
                 quantityDiff = formerQuantity - quantity;
-                //product.StockQuantity += quantityDiff;
                 cart.TotalPrice -= item.Price;
                 if (quantity == 0)
                 {
@@ -175,8 +172,7 @@ namespace Food_Market.Controllers
 
             var item = Context.CartItems.FirstOrDefault(x => x.Id == id);
 
-            //Add item's quantity to product stock
-           // product.StockQuantity += item.Quantity;
+            
             //Delete cart item
             Context.CartItems.Remove(item);
 
@@ -199,7 +195,8 @@ namespace Food_Market.Controllers
 
                 Context.SaveChanges();
             }
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index");
         }
+        
     }
 }

@@ -1,0 +1,136 @@
+﻿@model Food_Market.Models.CheckoutViewModel
+
+
+
+
+<div class="row d-flex justify-content-center">
+    <div class="col-md-4">
+        <form id="registerForm" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+            <hr />
+        <h2>List of Items</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Product name
+                    </th>
+                    <th>
+                        Price
+                    </th>
+                    <th>
+                        Quantity
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.CartItems)
+                {
+                    <tr>
+                        <td>
+                            @item.Name
+                        </td>
+                        <td>
+                            @if(Model.Currency == "USD")
+                            {
+                                @item.PriceTotal <span>$</span>
+                            }else{
+                                @item.PriceTotal <span>SEK</span>
+                            }
+                        </td>
+                        <td>
+                            @item.Quantity
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        @if(Model.Currency == "USD")
+        {
+            <p><strong>Total before shipping rate: </strong> @Model.CartTotal $</p>
+        }
+        else
+        {
+            <p><strong>Total before shipping rate: </strong> @Model.CartTotal SEK</p>
+        }
+
+
+        <h2>Checkout</h2>
+        
+            <div class="form-floating row">
+                <div class="form-floating col-md-6 mb-3">
+                    <input asp-for="FirstName" class="form-control" aria-required="true" />
+                    <label asp-for="FirstName">First name</label>
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="form-floating col-md-6 mb-3">
+                    <input asp-for="LastName" class="form-control" aria-required="true" />
+                    <label asp-for="LastName">Last name</label>
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Email" class="form-control" autocomplete="username" aria-required="true"  />
+                <label asp-for="Email">Email</label>
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="PhoneNumber" class="form-control" />
+                <label asp-for="PhoneNumber">Phone number</label>
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div id="Adress">
+                <div class="form-floating mb-3">
+                    <input asp-for="Address" class="form-control" />
+                    <label asp-for="Address">Street</label>
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+                <div class="form-floating row">
+                    <div class="form-floating col-md-6 mb-3">
+                        <input asp-for="ZipCode" class="form-control" />
+                        <label asp-for="ZipCode">Postal code</label>
+                        <span asp-validation-for="ZipCode" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating col-md-6 mb-3">
+                        <input asp-for="City" class="form-control" />
+                        <label asp-for="City">City</label>
+                        <span asp-validation-for="City" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-floating row">
+                    <div class="form-floating col-md-6 mb-3">
+                        <input asp-for="State" class="form-control" />
+                        <label asp-for="State">State</label>
+                        <span asp-validation-for="State" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating col-md-6 mb-3">
+                        <input asp-for="Country" class="form-control" />
+                        <label asp-for="Country">Country</label>
+                        <span asp-validation-for="Country" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-floating mb-3">
+                    <input asp-for="CardNumber" class="form-control"/>
+                    <label asp-for="CardNumber">Card number</label>
+                    <span asp-validation-for="CardNumber" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input asp-for="NameOnCard" class="form-control" />
+                    <label asp-for="NameOnCard">Name on the card</label>
+                    <span asp-validation-for="NameOnCard" class="text-danger"></span>
+                </div>
+                <div class="form-floating col-md-6 mb-3">
+                    <input asp-for="CVV" class="form-control" />
+                    <label asp-for="CVV">CVV</label>
+                    <span asp-validation-for="CVV" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" value="SubmitOrder" asp-action="SubmitOrder" asp-controller="Checkouts" class="btn btn-primary col-md-12">Send order</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+    
+

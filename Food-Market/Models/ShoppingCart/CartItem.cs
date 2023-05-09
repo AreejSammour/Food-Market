@@ -39,5 +39,8 @@ namespace Food_Market.Models.ShoppingCart
         [Column(TypeName = "decimal(18, 2)")]
         [Required]
         public decimal PriceTotal { get; set; }
+
+        //public int CheckoutId { get; set; }
+        public Checkout? Checkout { get; set; }
     }
 }

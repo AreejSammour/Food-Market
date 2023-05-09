@@ -1,0 +1,10 @@
+﻿@model Food_Market.Models.Checkout
+
+@{
+    ViewData["Title"] = "SubmitOrder";
+}
+<h1>Your order has been recieved</h1>
+
+@foreach(var item in Model.CartItems){
+    <p>@item.Name</p>
+}

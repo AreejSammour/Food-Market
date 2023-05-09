@@ -35,7 +35,7 @@
         <a asp-action="Index" asp-controller="Products" class="btn btn-secondary btn-block">Back to products</a>
     </div>
     <div class="col-md-4 mb-2 text-start">
-        <a asp-action="AddToCart" asp-controller="#" asp-route-id="@Model.Id" class="btn btn-primary btn-block custom-btn">Add to Cart</a>
+        <a class="btn productcard-btn" asp-Controller="Cart" asp-action="AddToCart" asp-route-id="@Model.Id">Add to cart</a>
     </div>
 </div>
 

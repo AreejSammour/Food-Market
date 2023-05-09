@@ -3,8 +3,7 @@
 @model ProductCategory
 
 
-<h1 class="page-title">Products</h1>
-
+<h4 class="col-md-6">Products</h4>
 <form asp-controller="Products" asp-action="Index" method="post">
     <div class="category-form">
         <select class="form-select category-selectfield" asp-items="Model.CategoriesSelectList" asp-for="SelectedCategory">
@@ -27,12 +26,30 @@
                 @Html.DisplayFor(modelItem => item.ProductName)
             </p>
             <p class="price-item">
-                @Html.DisplayFor(modelItem => item.Price)
+                @if (Model.Currency == "USD")
+                {
+                     @(item.Price) <span>$</span>
+                }
+                else
+                {
+                     @(item.Price) <span>kr</span>
+                }
             </p>
-            <div class="d-flex justify-content-evenly mb-2">
-                <a class="btn productcard-btn" asp-action="Details" asp-route-id="@item.Id">Learn more</a>
-                <a class="btn productcard-btn" asp-action="#" asp-route-id="@item.Id">Add to cart</a>
+            <div class="d-flex justify-content-evenly mb-2  row">
+                <a class="btn productcard-btn form-floating" asp-action="Details" asp-route-id="@item.Id">Learn more</a>
+                <a class="form-floating">
+                    <form asp-controller="Products" asp-action="AddToCart" asp-route-productId="@item.Id" method="post">
+                        <div class="form-group">
+                            <label>
+                                Quantity:<input type="number" name="quantity" value="1" min="1" max="1000" class="form-control" />
+                            </label>
+                            <button type="submit" class="btn btn-primary">Add to Cart</button>
+                        </div>
+                    </form>
+                </a>
+                
             </div>
+            
             <p class="mt-3">
                 <small class="text-muted">
                     Related tags: <span>@Html.DisplayFor(modelItem => item.ProductTag)</span>
@@ -41,3 +58,21 @@
         </div>
     }
 </div>
+
+
+<script>
+    function hideAddressInputs() {
+        var showAddress = document.getElementById("Now").checked;
+        var address = document.getElementById("Adress");
+
+        if (showAddress) {
+            
+            address.style.display = "block";
+            address.ariaRequired = true;
+        } else {
+            address.style.display = "none";
+            address.ariaRequired = false;
+
+        }
+    }
+</script>

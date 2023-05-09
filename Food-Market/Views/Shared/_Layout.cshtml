@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
 </head>
 <body>
     <header>
@@ -26,10 +28,10 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Products" asp-action="Index">Products</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Ticket" asp-action="Index">Support</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">Support</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Ticket" asp-action="AllTickets">Admin</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Index">Admin</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav .col-md-4 col-3 .ms-auto my-2 my-lg-0" style="--bs-scroll-height: 100px;">
@@ -44,12 +46,21 @@
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="#">My Profile</a></li>
                                 <li><a class="dropdown-item" asp-controller="Order" asp-action="Index">My Orders</a></li>
-                                <li><a class="dropdown-item" asp-controller="Ticket" asp-action="MyTickets">My Tickets</a></li>
+                                <li><a class="dropdown-item" href="#">My Tickets</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item fw-lighter" href="#">Sign Out</a></li>
                             </ul>
                         </li>
                     </ul>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-primary"  onclick="updateCurrencyMode('SEK')">SEK</button>
+                        <button type="button" class="btn btn-primary " onclick="updateCurrencyMode('USD')">USD</button>
+                    </div>
+                    <a id="cart-count" class="nav-link text-dark" asp-area="" asp-controller="Cart" asp-action="Index">
+                        <i class="fa fa-shopping-cart" style="font-size:4em"></i>
+                        <span class="badge badge-pill badge-danger"></span>
+                        <span class="badge badge-pill badge-danger">5</span>
+                    </a>
                 </div>
             </div>
         </nav>
@@ -62,12 +73,19 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - Food Market
+            &copy; 2023 - Food_Market - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+            function updateCurrencyMode(currencyMode) {
+                $.post('@Url.Action("UpdateCurrencyMode", "Products")', { currencyMode: currencyMode }, function (data) {
+                    location.reload();
+                });
+            }
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
