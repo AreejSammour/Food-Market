@@ -26,6 +26,15 @@ namespace Food_Market
         {
         }
 
+        // insert connectionstring for it to work
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Data Source=(local);Initial Catalog=FoodMarket;Integrated Security=false;User=sa;Password=reallyStrongPwd123;TrustServerCertificate=True;", builder =>
+            {
+                builder.EnableRetryOnFailure();
+            });
+        }
+
         // data seed for TICKETS - Amanda
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
