@@ -1,0 +1,12 @@
+﻿@model Food_Market.Models.OrderModels.OrderDetail
+
+<li class="list-group-item">
+	<ul class="list-group list-group-horizontal list-group-flush">
+		<li class="list-group-item col-1">@Model.OrderId</li>
+		<li class="list-group-item col-2">@Model.Checkout.Email</li>
+		<li class="list-group-item col-3">@Model.PlacedDate.ToString("MM/dd/yyyy hh:mm tt") </li>
+		<li class="list-group-item col-2">@Model.OrderTotal</li>
+		<li class="list-group-item col-2">@Model.OrderStatus</li>
+		<li class="list-group-item col-2"><a asp-action="Details" asp-route-id="@Model.CheckoutId">View Details</a></li>
+	</ul>
+</li>
