@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Food_Market.Models.ProductModels
 {
@@ -15,7 +17,10 @@ namespace Food_Market.Models.ProductModels
         [StringLength(int.MaxValue, MinimumLength = 5, ErrorMessage = "The Product Description value must be at least 5 characters")]
         public string Description { get; set; }
         [Required]
-        public decimal Price { get; set; }
+		[Range(0.01, double.MaxValue)]
+		[DataType(DataType.Currency)]
+		[Column(TypeName = "decimal(18, 2)")]
+		public decimal Price { get; set; }
         [Required]
         public string ImageUrl { get; set; }
 

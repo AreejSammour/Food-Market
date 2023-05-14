@@ -1,0 +1,8 @@
+﻿@model Food_Market.Models.ShoppingCart.CartItem
+
+<div class="container w-25 ">
+    <img src="@Html.DisplayFor(modelItem => Model.Product.ImageUrl)" class="product-image" />
+</div>
+<h5 class="">Product Name: @Model.Product.ProductName</h5>
+<h5 class="">Product Description: @Model.Product.Description</h5>
+<h5 class="">Product Price: @Model.Price</h5>

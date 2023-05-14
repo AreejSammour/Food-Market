@@ -1,5 +1,16 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿
 @{
+	ViewData["Title"] = "Order Details";
 }
+
+<div class="container justify-content-center m-3">
+	<h3>Your order is confirmed</h3>
+	<h4>Thank you <b>@Model.FirstName @Model.LastName</b></h4>
+	<h6>You'll recieve a confirmation email with you order number</h6>
+</div>
+
+<div class="d-flex justify-content-end m-3">
+	<a asp-controller="Order" asp-action="Details" asp-route-id="@Model.Id" class="btn btn-info">
+		Go till details
+	</a>
+</div>

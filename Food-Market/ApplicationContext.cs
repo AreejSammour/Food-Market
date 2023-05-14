@@ -5,6 +5,7 @@ using Food_Market.Models.ShoppingCart;
 using Food_Market.Models.ProductModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations;
+using Food_Market.Models.OrderModels;
 
 namespace Food_Market
 {
@@ -19,21 +20,23 @@ namespace Food_Market
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<Category> Categories { get; set; }
+		public DbSet<Order> orders { get; set; }
+		public DbSet<OrderDetail> ordersDetail { get; set; }
 
-        //Constructor
-        public ApplicationContext(DbContextOptions<ApplicationContext> options)
+		//Constructor
+		public ApplicationContext(DbContextOptions<ApplicationContext> options)
             : base(options)
         {
         }
 
-        // insert connectionstring for it to work
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Data Source=(local);Initial Catalog=FoodMarket;Integrated Security=false;User=sa;Password=reallyStrongPwd123;TrustServerCertificate=True;", builder =>
-            {
-                builder.EnableRetryOnFailure();
-            });
-        }
+        //// insert connectionstring for it to work
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer("Data Source=(local);Initial Catalog=FoodMarket;Integrated Security=false;User=sa;Password=reallyStrongPwd123;TrustServerCertificate=True;", builder =>
+        //    {
+        //        builder.EnableRetryOnFailure();
+        //    });
+        //}
 
         // data seed for TICKETS - Amanda
         protected override void OnModelCreating(ModelBuilder modelBuilder)
